@@ -1,0 +1,94 @@
+@use "global";
+
+$primary: #674bb1;
+
+#home {
+  background: $primary url(../images/bg-mobile.svg) no-repeat;
+  background-size: contain;
+
+  header {
+    padding: 30px 0;
+
+    .logo {
+      width: 200px;
+    }
+  }
+
+  #preview {
+    margin-bottom: 1rem;
+
+    img {
+      padding: 1.5rem;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  #register {
+    text-align: center;
+    padding: 1.5rem;
+    padding-top: 3rem;
+
+    button {
+      background-color: #fff;
+      border: #fff;
+      border-radius: 30px;
+      width: 175px;
+      padding: 6px 20px;
+      color: $primary;
+      box-shadow: 0 5px 10px #5a5a5a;
+      margin-bottom: 3rem;
+    }
+  }
+
+  #social-links .social {
+    border: white 1px solid;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 3px;
+    margin: 5px;
+
+    i {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #home {
+    header {
+      margin-bottom: 50px;
+    }
+    .container {
+      display: flex;
+
+      #preview {
+        flex: 3;
+        padding: 30px;
+        margin-bottom: 0;
+
+        img {
+          padding: 3rem;
+        }
+      }
+
+      #register {
+        flex: 2;
+        padding-top: 6rem;
+        text-align: left;
+
+        button {
+          margin: 0;
+        }
+
+        #social-links {
+          display: flex;
+
+          height: 160px;
+          align-items: flex-end;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
